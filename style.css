@@ -1,0 +1,349 @@
+@import url(clash-display.css);
+
+:root {
+    --c-dark: #212529;
+    --c-brand: #4e57d4;
+    --c-brand-light: #4e57d4;
+    --c-brand-rgb: 78, 87, 212;
+    --c-body: #727272;
+    --font-base: "ClashDisplay", sans-serif;
+    --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.08);
+    --transition: all 0.5s ease;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif /*var(--font-base)*/;
+    line-height: 1.7;
+    color: var(--c-body);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 600; 
+    color: var(--c-dark)
+}
+
+a {
+    text-decoration: none;
+    color: var(--c-brand);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--c-brand-light);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-padding {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+
+.nav-link {
+    font-weight: 800px;
+    color: black;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    color: #4e57d4;
+}
+
+.morrie {
+    color: black;
+}
+
+.morrie:hover {
+    cursor: default;
+    color: var(--c-brand);
+    text-decoration: none;
+}
+
+
+/* HOME */
+
+#home {
+    background-color: white;
+}
+
+.home-sci a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: whitesmoke;
+    border: 3px solid black;
+    border-radius: 50%;
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+}
+
+.home-sci a:hover{
+    background-color: black;
+    color: whitesmoke;
+    width: 70px;
+    height: 70px;
+    font-size: 40px;
+}
+
+
+/* SECTION TITLE */
+
+.section-title {
+    margin-bottom: 40px;
+}
+
+.section-title .line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--c-brand);
+    margin: 16px auto 24px auto;
+}
+
+.section-title p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+/* ABOUT DETAILS KEME */
+
+#about {
+    background-color: aliceblue;
+}
+
+.iconbox {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 35px;
+    box-sizing: border-box;
+    border: solid 3px black;
+    border-radius: 20px;
+}
+
+/* EDUC */
+
+#education {
+    background-color: aliceblue;
+}
+
+.educ-item {
+    overflow: hidden;
+    position: relative;
+}
+
+.educ-item img,
+.educ-item .educ-overlay {
+    transition: all 0.4s ease;
+}
+
+.educ-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:  rgba(17, 36, 90, 0.5);
+    padding: 30px;
+    opacity: 0;
+}
+
+.educ-overlay h2,
+.educ-overlay h4,
+.educ-overlay h5 {
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.educ-item:hover .educ-overlay {
+    opacity: 1;
+}
+
+.educ-item:hover img {
+    transform: scale(1.1);
+}
+
+/* HOBBIES */
+
+#hobbies {
+    background-color: aliceblue;
+}
+
+.hobby-box {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 35px;
+    box-sizing: border-box;
+    border: solid 3px black;
+    border-radius: 20px;
+    color: black;
+    background-color: whitesmoke;
+}
+
+svg {
+    height: 50px;
+    width: 50px;
+    margin: 10px 15px 20px 0;
+}
+
+
+/* FAVORITES */
+
+#favorites {
+    background-color: aliceblue;
+}
+
+.fave-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.fave {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.fave img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: rgba(17, 36, 90, 0.5);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    color: whitesmoke;
+    font-weight: 800px;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.layer h6 {
+    color: whitesmoke;
+    font-weight: 300px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: blue;
+    text-decoration: none;
+    font-size: 40px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.fave:hover img{
+    transform: scale(1.1);
+}
+
+.fave:hover .layer {
+    height: 100%;
+}
+
+/* SCHED */
+
+#schedule {
+    background-color: aliceblue;
+}
+
+.table-sched {
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    color: black;
+    margin: 0 auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    background-color: whitesmoke
+}
+
+
+.table-sched th,
+.table-sched td {
+    padding: 8px;
+}
+
+@media (max-width: 768px) {
+    .table-sched {
+        font-size: 14px;
+    }
+
+    .table-sched th,
+    .table-sched td {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 414px) {
+    .table-sched {
+        font-size: 12px;
+    }
+
+    .table-sched th,
+    .table-sched td {
+        padding: 4px;
+    }
+}
+
+@media (max-width: 736px) {
+    .table-sched {
+        font-size: 14px;
+    }
+
+    .table-sched th,
+    .table-sched td {
+        padding: 6px;
+    }
+}
